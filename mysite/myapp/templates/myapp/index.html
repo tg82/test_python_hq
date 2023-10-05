@@ -1,0 +1,27 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block body %}
+<h1>Продукты:</h1>
+{% if products %}
+<div>
+  {% for product in products %}
+  <div>
+    <p>Наименование: {{ product.title }}</a></p>
+    {% for lesson in lessons %}
+        <p>Урок: {{ lesson.name }}</p>
+    {% endfor %}
+
+
+  </div>
+  {% endfor %}
+</div>
+
+{% else %}
+<h3>Нет продуктов</h3>
+{% endif %}
+
+{% endblock body %}
